@@ -1,0 +1,86 @@
+.modal-wrapper {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+
+	background-color: rgb(85, 84, 84, 0.5);
+}
+
+.modal-wrapper-close {
+	display: none;
+}
+
+.modal {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	width: 400px;
+	padding: 30px 20px;
+
+	border-radius: 8px;
+	background-color: #fff;
+}
+
+.close-btn {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	padding: 5px 5px;
+
+	border-radius: 8px;
+
+	&:hover,
+	&:focus {
+		background-color: red;
+		color: #fff;
+	}
+}
+
+.modal__form {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+}
+
+.form-label {
+	display: flex;
+	flex-direction: column;
+}
+
+.label-title {
+	margin-bottom: 5px;
+}
+
+.form-input {
+	width: 100%;
+
+	padding: 5px 10px;
+
+	border: 1px solid #000;
+	border-radius: 8px;
+
+	resize: none;
+}
+
+.modal-select {
+	padding: 5px;
+	border-radius: 8px;
+}
+
+.form-btn {
+	padding: 5px 10px;
+
+	border: 1px solid rgb(85, 84, 84);
+	border-radius: 8px;
+
+	&:hover,
+	&:focus {
+		border-color: rgba(100, 148, 237, 0.6);
+		background-color: rgba(100, 148, 237, 0.6);
+		color: #fff;
+	}
+}

@@ -1,0 +1,24 @@
+{
+    "name": "test-1-radency",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "source": "src/index.html",
+    "scripts": {
+        "start": "parcel",
+        "build": "parcel build",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "Vladyslav Kupchuk <kupchuk.vlad@gmail.com>",
+    "license": "ISC",
+    "devDependencies": {
+        "@parcel/transformer-sass": "^2.9.3",
+        "parcel": "^2.9.3",
+        "posthtml-include": "^1.7.4"
+    },
+    "dependencies": {
+        "bootstrap": "^5.3.1",
+        "posthtml-doctype": "^1.1.1"
+    }
+}
