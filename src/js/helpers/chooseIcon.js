@@ -1,3 +1,4 @@
+import { Categories } from '../data';
 import {
 	icons
 } from '../../assets/images/main-table'
@@ -5,16 +6,16 @@ import {
 export function chooseIcon(category) {
 	let icon = null;
 	switch (category) {
-		case 'Task':
+		case Categories.task:
 			icon = 'icon-task';
 			break;
-		case 'Random Thought':
+		case Categories.thought:
 			icon = 'icon-thought';
 			break;
-		case 'Idea':
+		case Categories.idea:
 			icon = 'icon-idea';
 			break;
-		case 'Quote':
+		case Categories.quote:
 			icon = 'icon-quote';
 			break;
 		default: icon = 'icon-task';

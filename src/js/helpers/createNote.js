@@ -4,7 +4,7 @@ import {
 	todoData
 } from '../data';
 
-import { findDateInText, renderTodo, closeModal } from '../helpers';
+import { findDateInText, renderTodo, closeModal } from '.';
 
 const modalForm = document.querySelector('.modal__form');
 

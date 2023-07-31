@@ -67,7 +67,15 @@
 	}
 }
 
-.btn-delete {
+.btn-unarchive {
+	&:hover,
+	&:focus {
+		color: rgb(2, 184, 230);
+	}
+}
+
+.btn-delete,
+.btn-archived-delete {
 	&:hover,
 	&:focus {
 		color: red;
@@ -78,7 +86,13 @@
 	fill: currentColor;
 }
 
-.create-note-btn {
+.btn-wrapper {
+	display: flex;
+	gap: 10px;
+}
+
+.create-note-btn,
+.toggle-archive-btn {
 	padding: 5px 10px;
 
 	border: 1px solid rgb(85, 84, 84);
