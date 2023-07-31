@@ -5,7 +5,7 @@ import {
 import {
 	icons
 } from '../../assets/images/main-table'
-import { chooseIcon, deleteTodo, limit, openModal } from '../helpers';
+import { archiveTodo, chooseIcon, deleteTodo, limit, openModal, renderStatistic } from '../helpers';
 
 const todoList = document.querySelector('.render-todo');
 
@@ -53,8 +53,11 @@ export function renderTodo() {
 
 	todoList.innerHTML = markup;
 
+	renderStatistic();
+
 	const deleteNoteBtn = document.querySelectorAll('.btn-delete');
 	const editNoteBtn = document.querySelectorAll('.btn-edit');
+	const archiveNoteBtn = document.querySelectorAll('.btn-archive');
 
 	deleteNoteBtn.forEach(btn => {
 		btn.addEventListener('click', deleteTodo);
@@ -62,5 +65,9 @@ export function renderTodo() {
 
 	editNoteBtn.forEach(btn => {
 		btn.addEventListener('click', openModal);
+	})
+
+	archiveNoteBtn.forEach(btn => {
+		btn.addEventListener('click', archiveTodo);
 	})
 }
