@@ -27,7 +27,9 @@ export function renderTodo() {
 				</li>
 				<li class="table-row__item">${todo.created}</li>
 				<li class="table-row__item">${todo.category}</li>
-				<li class="table-row__item">${limit(todo.content, 30)}</li>
+				<li class="table-row__item">
+					${limit(todo.content, 30)}
+				</li>
 				<li class="table-row__item">${todo.dates}</li>
 				<li class="table-row__item">
 					<button name="${todo.id}" class="btn-edit" type="button">
