@@ -1,16 +1,19 @@
+.main-table {
+	margin-bottom: 30px;
+}
+
 .table {
 	margin-bottom: 10px;
 }
 
-.table__item {
-	&:first-child {
-		background-color: rgb(85, 84, 84);
-		color: #fff;
-		// .table-row__item {
-		// 	justify-content: center;
-		// }
-	}
+.table__item-head {
+	margin-bottom: 10px;
 
+	background-color: rgb(85, 84, 84);
+	color: #fff;
+}
+
+.table__item {
 	background-color: rgba(100, 148, 237, 0.2);
 
 	&:not(:last-child) {
@@ -31,8 +34,8 @@
 	align-items: center;
 	gap: 5px;
 
-	&::first-line {
-		display: none;
+	&:last-child {
+		justify-content: flex-end;
 	}
 }
 
@@ -44,6 +47,35 @@
 
 	background-color: rgb(75, 74, 74);
 	border-radius: 50%;
+}
+
+.table-icon {
+	fill: #fff;
+}
+
+.btn-edit {
+	&:hover,
+	&:focus {
+		color: rgba(78, 172, 1, 0.973);
+	}
+}
+
+.btn-archive {
+	&:hover,
+	&:focus {
+		color: rgba(201, 171, 3, 0.973);
+	}
+}
+
+.btn-delete {
+	&:hover,
+	&:focus {
+		color: red;
+	}
+}
+
+.icon {
+	fill: currentColor;
 }
 
 .create-note-btn {

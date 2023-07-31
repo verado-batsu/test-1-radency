@@ -1,7 +1,7 @@
 import { Categories } from './categories';
-import { toDoData } from './toDo';
+import { todoData } from './todoData';
 
 export {
 	Categories,
-	toDoData
+	todoData
 }

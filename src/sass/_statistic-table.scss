@@ -1,0 +1,9 @@
+.statistic-table {
+	.table-row__item {
+		flex-basis: calc((100% - 10px * 2) / 3);
+
+		&:last-child {
+			justify-content: flex-start;
+		}
+	}
+}

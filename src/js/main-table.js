@@ -1,6 +1,6 @@
-import { openModal, renderFirstToDo } from './helpers';
+import { openModal, renderTodo } from './helpers';
 
-renderFirstToDo();
+renderTodo();
 
 const createNoteBtn = document.querySelector('.create-note-btn');
 
