@@ -1,21 +1,13 @@
-import {
-	toDoData
-} from '../data'
-import { closeModal } from './openAndCloseModal';
-
+import { nanoid } from 'nanoid'
 
 import {
-	ideaIcon,
-	taskIcon,
-	quoteIcon,
-	thoughtIcon
-} from '../../assets/images/main-table'
-import { limit } from './limit';
+	todoData
+} from '../data';
 
-const table = document.querySelector('.table');
+import { findDateInText, renderTodo, closeModal } from '../helpers';
+
 const modalForm = document.querySelector('.modal__form');
 
-modalForm.addEventListener('submit', createNote)
 
 export function createNote(e) {
 	e.preventDefault();
@@ -27,6 +19,7 @@ export function createNote(e) {
 	const dates = findDateInText(content.value)
 
 	const newTodo = {
+		id: nanoid(),
 		name: name.value,
 		created: formatDate,
 		category: categories.value,
@@ -34,60 +27,12 @@ export function createNote(e) {
 		dates,
 	}
 
-	toDoData.push(newTodo)
+	todoData.push(newTodo)
 
-	renderNewToDo(newTodo)
+	renderTodo();
 
-	closeModal()
+	modalForm.removeEventListener('submit', createNote);
+	closeModal();
 }
 
-
-function findDateInText(text) {
-	const regexp = /\d\/\d\/\d{4}/g;
-	console.log(text.match(regexp))
-
-	const result = text.match(regexp)?.join(', ');
-	return result || '';
-}
-
-
-function renderNewToDo(toDo) {
-	let icon = null;
-	switch (toDo.category) {
-		case 'Task':
-			icon = taskIcon;
-			break;
-		case 'Random Thought':
-			icon = thoughtIcon;
-			break;
-		case 'Idea':
-			icon = ideaIcon;
-			break;
-		case 'Quote':
-			icon = quoteIcon;
-			break;
-		default: icon = taskIcon;
-	}
-
-
-	const markup = `
-	<li class="table__item">
-		<ul class="table-row">
-			<li class="table-row__item">
-			<div class="icon-wrapper">
-				<img class="table__icon" src="${icon} width="24" height="24" alt="${toDo.category}">
-			</div>
-			<span>${limit(toDo.name, 25)}</span>
-			</li>
-			<li class="table-row__item">${toDo.created}</li>
-			<li class="table-row__item">${toDo.category}</li>
-			<li class="table-row__item">${limit(toDo.content, 30)}</li>
-			<li class="table-row__item">${toDo.dates}</li>
-			<li class="table-row__item">buttons</li>
-		</ul>
-	</li>
-	`;
-	
-	table.insertAdjacentHTML('beforeend', markup);
-}
 

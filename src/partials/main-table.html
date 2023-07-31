@@ -1,15 +1,24 @@
-<ul class="table">
-	<li class="table__item">
-		<ul class="table-row">
-			<li class="table-row__item">Name</li>
-			<li class="table-row__item">Created</li>
-			<li class="table-row__item">Category</li>
-			<li class="table-row__item">Content</li>
-			<li class="table-row__item">Dates</li>
-			<li class="table-row__item">
-				<!-- <img src="../assets/images/main-table/" alt=""> -->
-			</li>
+<div class="main-table">
+	<ul class="table">
+		<li class="table__item-head">
+			<ul class="table-row">
+				<li class="table-row__item">Name</li>
+				<li class="table-row__item">Created</li>
+				<li class="table-row__item">Category</li>
+				<li class="table-row__item">Content</li>
+				<li class="table-row__item">Dates</li>
+				<li class="table-row__item">
+					<svg class="table-icon" width="24" height="24">
+						<use href="assets/images/main-table/icons.svg#icon-archive"></use>
+					</svg>
+					<svg class="table-icon" width="24" height="24">
+						<use href="assets/images/main-table/icons.svg#icon-delete"></use>
+					</svg>
+				</li>
+			</ul>
+		</li>
+		<ul class="render-todo">
 		</ul>
-	</li>
-</ul>
-<button class="create-note-btn" type="button">Create Note</button>
+	</ul>
+	<button class="create-note-btn" type="button">Create Note</button>
+</div>

@@ -1,7 +1,8 @@
 import { Categories } from "./categories";
 
-export const toDoData = [
+export const todoData = [
 	{
+		id: '1',
 		name: 'Shoping list',
 		created: 'April 20, 2021',
 		category: Categories.task,
@@ -9,6 +10,7 @@ export const toDoData = [
 		dates: '',
 	},
 	{
+		id: '2',
 		name: 'The theory of evolution',
 		created: 'April 27, 2021',
 		category: Categories.thought,
@@ -16,6 +18,7 @@ export const toDoData = [
 		dates: '',
 	},
 	{
+		id: '3',
 		name: 'New Feature',
 		created: 'May 05, 2021',
 		category: Categories.idea,
@@ -23,6 +26,7 @@ export const toDoData = [
 		dates: '3/5/2021, 5/5/2021',
 	},
 	{
+		id: '4',
 		name: 'William Gaddis',
 		created: 'May 07, 2021',
 		category: Categories.quote,
@@ -30,6 +34,7 @@ export const toDoData = [
 		dates: '',
 	},
 	{
+		id: '5',
 		name: 'Books',
 		created: 'May 15, 2021',
 		category: Categories.task,
@@ -37,6 +42,7 @@ export const toDoData = [
 		dates: '',
 	},
 	{
+		id: '6',
 		name: 'English',
 		created: 'Jule 20, 2023',
 		category: Categories.task,
@@ -44,6 +50,7 @@ export const toDoData = [
 		dates: '',
 	},
 	{
+		id: '7',
 		name: 'JavaScript',
 		created: 'June 08, 2023',
 		category: Categories.task,
