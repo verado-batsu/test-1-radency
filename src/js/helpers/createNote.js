@@ -1,4 +1,5 @@
-import { nanoid } from 'nanoid'
+import { nanoid } from 'nanoid';
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 import {
 	todoData
@@ -12,6 +13,11 @@ const modalForm = document.querySelector('.modal__form');
 export function createNote(e) {
 	e.preventDefault();
 	const { name, categories, content } = e.currentTarget.elements;
+
+	if (name.value.trim() === '' || content.value.trim() === '') {
+		Notify.failure('Fields must not be empty');
+		return;
+	}
 
 	const date = new Date()
 	const formatDate = date.toLocaleDateString("en-US", { year: 'numeric', month: 'long', day: 'numeric' })
