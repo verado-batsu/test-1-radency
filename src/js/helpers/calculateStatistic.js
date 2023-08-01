@@ -77,6 +77,5 @@ export function calculateStatistic() {
 				break;
 			default: return;
 		}
-		
 	})
 }

@@ -1,3 +1,5 @@
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
+
 import { todoData } from '../data';
 import { closeModal, findDateInText, renderTodo } from '../helpers';
 
@@ -18,6 +20,11 @@ export function getEditData(e) {
 export function editTodo(e) {
 	e.preventDefault();
 	const { name, categories, content } = e.currentTarget.elements;
+
+	if (name.trim() === '' || content.trim() === '') {
+		Notify.failure('Fields must not be empty')
+		return;
+	}
 
 	const dates = findDateInText(content.value)
 
